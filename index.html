@@ -1,3 +1,1204 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libra - Eventi Dicembre 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #EAE4CE;
+            color: #4B5031;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(234, 228, 206, 0);
+            backdrop-filter: blur(0);
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: none;
+            transition: all 0.3s ease;
+        }
+
+.nav.scrolled {
+    background: rgba(234, 228, 206, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(75, 80, 49, 0.12);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4B5031;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.logo-img {
+    height: 60px;   /* puoi salire a 40 se vuoi più grande */
+    width: auto;
+    display: block;
+}
+
+.logo .tagline {
+    font-weight: 400;
+    font-size: 12px;
+    opacity: 0.7;
+    text-transform: none;
+    letter-spacing: 0.04em;
+}
+
+
+        .logo .divider {
+            color: #4B5031;
+            opacity: 0.5;
+            margin: 0 8px;
+        }
+
+        .logo .tagline {
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: #4B5031;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.25s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            background: #D3BA8F;
+            color: #4B5031;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #4B5031;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: rgba(234, 228, 206, 0.98);
+            backdrop-filter: blur(18px);
+            z-index: 999;
+            padding: 20px;
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav a {
+            display: block;
+            padding: 15px 0;
+            color: #4B5031;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(75, 80, 49, 0.1);
+        }
+
+        /* HERO DICEMBRE */
+
+.hero-section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #EAE4CE 0%, #D3BA8F 100%);
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: -40px;
+    background:
+      radial-gradient(circle at top left, rgba(255,255,255,0.6) 0%, transparent 55%),
+      radial-gradient(circle at bottom right, rgba(218,185,118,0.45) 0%, transparent 60%);
+    opacity: 0.4;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    max-width: 900px;
+    padding: 26px 30px 30px;
+    margin: 0 20px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.32);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow: 0 20px 60px rgba(154, 110, 14, 0.25);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    animation: fadeInUp 1s ease;
+}
+
+
+        .hero-logo {
+            font-size: clamp(4rem, 10vw, 7rem);
+            font-weight: 300;
+            color: #9A6E0E;
+            margin-bottom: 16px;
+            letter-spacing: -0.03em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.10);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: #4B5031;
+            opacity: 0.85;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 34px;
+        }
+
+        .hero-month {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            color: #4B5031;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        .hero-text {
+            font-size: clamp(1.08rem, 2vw, 1.35rem);
+            line-height: 1.8;
+            color: #4B5031;
+            margin-bottom: 42px;
+            font-weight: 300;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-text em {
+            font-style: normal;
+            color: #9A6E0E;
+            font-weight: 400;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 26px;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #9A6E0E 0%, #BB823A 100%);
+            color: white;
+            padding: 16px 34px;
+            border: none;
+            border-radius: 999px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 10px 26px rgba(154, 110, 14, 0.28);
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 34px rgba(154, 110, 14, 0.38);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: #9A6E0E;
+            border: 2px solid #9A6E0E;
+            box-shadow: none;
+        }
+
+        .cta-button.secondary:hover {
+            background: #9A6E0E;
+            color: #fff;
+        }
+
+        .hero-caption {
+            font-size: 0.9rem;
+            color: #4B5031;
+            opacity: 0.78;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 26px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-8px); }
+            60% { transform: translateX(-50%) translateY(-4px); }
+        }
+
+        /* SEZIONE BENVENUTO */
+
+        .welcome-section {
+            padding: 90px 30px 70px;
+            background: #FFFFFF;
+            position: relative;
+        }
+
+        .welcome-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .welcome-title {
+            font-size: clamp(2.5rem, 5vw, 3.4rem);
+            color: #9A6E0E;
+            margin-bottom: 32px;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .welcome-text {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #4B5031;
+            text-align: justify;
+            margin-bottom: 24px;
+        }
+
+        .welcome-text strong {
+            color: #9A6E0E;
+            font-weight: 500;
+        }
+
+        .signature {
+            text-align: right;
+            font-style: italic;
+            color: #9A6E0E;
+            font-size: 1.15rem;
+            margin-top: 34px;
+        }
+
+        /* CONTAINER PRINCIPALE */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background:
+      radial-gradient(circle at top left, rgba(255, 255, 255, 0.9) 0%, rgba(250, 246, 236, 0.9) 48%, rgba(243, 234, 213, 0.9) 100%);
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 34px rgba(75, 80, 49, 0.08);
+    border-radius: 0 0 14px 14px;
+}
+
+        .section {
+            padding: 70px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: clamp(2.3rem, 5vw, 3.2rem);
+            font-weight: 300;
+            color: #9A6E0E;
+            margin-bottom: 18px;
+            letter-spacing: -0.02em;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #9A6E0E, #BB823A);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: #4B5031;
+            opacity: 0.75;
+        }
+
+        /* GRID EVENTI */
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 26px;
+            margin-top: 40px;
+        }
+
+.event-card {
+    background: #FFFFFF;
+    padding: 34px;
+    border-radius: 16px;
+    border: 1px solid rgba(75, 80, 49, 0.09);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(75, 80, 49, 0.04);
+}
+
+.event-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(218, 185, 118, 0.18), transparent 55%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(154, 110, 14, 0.25);
+    background-color: #FFFBF4;
+    box-shadow: 0 14px 34px rgba(75, 80, 49, 0.16);
+}
+
+.event-card:hover::before {
+    opacity: 1;
+}
+
+
+        .special-event {
+            border-left: 4px solid #BB823A;
+            background: linear-gradient(135deg, rgba(187, 130, 58, 0.04) 0%, #FFFFFF 100%);
+        }
+
+        .recurring-event {
+            border-left: 4px solid #959D6B;
+            background: linear-gradient(135deg, rgba(149, 157, 107, 0.04) 0%, #FFFFFF 100%);
+        }
+
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 18px;
+        }
+
+.event-date {
+    background: linear-gradient(135deg, #9A6E0E 0%, #BB823A 100%);
+    color: white;
+    padding: 14px 18px;
+    border-radius: 18px;
+    text-align: center;
+    min-width: 80px;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(154, 110, 14, 0.35);
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+        .event-info {
+            flex: 1;
+            margin-left: 18px;
+        }
+
+        .event-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #9A6E0E;
+            margin-bottom: 6px;
+        }
+
+        .event-instructor {
+            color: #4B5031;
+            font-style: italic;
+            margin-bottom: 12px;
+            opacity: 0.85;
+            font-size: 0.95rem;
+        }
+
+        .event-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+
+        .meta-badge {
+            background: rgba(149, 157, 107, 0.08);
+            color: #4B5031;
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(149, 157, 107, 0.22);
+        }
+
+        .event-description {
+            color: #4B5031;
+            line-height: 1.7;
+            margin-bottom: 22px;
+            opacity: 0.92;
+            font-size: 0.96rem;
+        }
+
+.book-button {
+    background: linear-gradient(135deg, #9A6E0E 0%, #BB823A 100%);
+    color: white;
+    padding: 13px 26px;
+    border: none;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 6px 18px rgba(154, 110, 14, 0.35);
+}
+
+.book-button::after {
+    content: '→';
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+.book-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(154, 110, 14, 0.45);
+    filter: brightness(1.03);
+}
+
+.book-button:hover::after {
+    transform: translateX(2px);
+}
+
+
+        /* HEADER SEMPLICE PER MESE */
+
+        .simple-header {
+            padding: 110px 40px 60px;
+            text-align: center;
+            background: linear-gradient(135deg, #EAE4CE 0%, #D3BA8F 100%);
+        }
+
+        .simple-header h1 {
+            font-size: clamp(2.5rem, 6vw, 3.8rem);
+            font-weight: 600;
+            color: #9A6E0E;
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+
+        .simple-header p {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #4B5031;
+            opacity: 0.8;
+        }
+
+        /* MAPPA / CONTATTI – COPIATO DA NOVEMBRE (stesso stile) */
+
+        .map-section {
+            background: white;
+            border-radius: 8px;
+            padding: 40px;
+            margin: 60px 0;
+            border: 1px solid rgba(75, 80, 49, 0.1);
+            box-shadow: 0 10px 26px rgba(75, 80, 49, 0.1);
+        }
+
+        .map-title {
+            font-size: 2rem;
+            font-weight: 300;
+            color: #9A6E0E;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .map-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .location-details {
+            background: rgba(234, 228, 206, 0.2);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .location-details h4 {
+            color: #9A6E0E;
+            margin-bottom: 18px;
+            font-size: 1.15rem;
+        }
+
+        .location-details p {
+            margin-bottom: 14px;
+            color: #4B5031;
+            line-height: 1.6;
+        }
+
+        .map-embed {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(75, 80, 49, 0.1);
+        }
+
+        /* FOOTER – identico a novembre */
+
+        .footer {
+            background: #4B5031;
+            color: #EAE4CE;
+            padding: 80px 30px 30px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: #D3BA8F;
+            margin-bottom: 22px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #EAE4CE;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.25s ease;
+        }
+
+        .footer-section a:hover {
+            opacity: 1;
+            color: #D3BA8F;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 18px;
+        }
+
+        .social-link {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(234, 228, 206, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s ease;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background: #9A6E0E;
+            transform: translateY(-2px);
+        }
+
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+            fill: #EAE4CE;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid rgba(234, 228, 206, 0.2);
+            opacity: 0.7;
+            font-size: 0.85rem;
+        }
+
+        /* BOTTONE WHATSAPP flottante – identico */
+
+        .whatsapp-float {
+            position: fixed !important;
+            bottom: 26px !important;
+            right: 26px !important;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 99999 !important;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.06);
+            box-shadow: 0 6px 26px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        /* SISTEMA PRENOTAZIONE (copiato da novembre, solo testi generici) */
+
+        .booking-section {
+            position: fixed;
+            bottom: 26px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+        .booking-toggle {
+            background: linear-gradient(135deg, #9A6E0E 0%, #BB823A 100%);
+            color: white;
+            border: none;
+            padding: 16px 26px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 8px 28px rgba(154, 110, 14, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse-booking 3s infinite;
+        }
+
+        .booking-toggle:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 12px 34px rgba(154, 110, 14, 0.6);
+        }
+
+        @keyframes pulse-booking {
+            0%, 100% {
+                box-shadow: 0 8px 28px rgba(154, 110, 14, 0.4);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 12px 38px rgba(154, 110, 14, 0.6);
+                transform: scale(1.02);
+            }
+        }
+
+        .booking-form-container {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            padding: 20px;
+        }
+
+        .booking-form-container.active {
+            display: flex;
+        }
+
+        .booking-form {
+            background: white;
+            padding: 34px;
+            border-radius: 14px;
+            max-width: 620px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 54px rgba(0, 0, 0, 0.32);
+            position: relative;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .form-header h3 {
+            font-size: 1.9rem;
+            color: #9A6E0E;
+            margin-bottom: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            color: #4B5031;
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 11px 14px;
+            border: 1px solid rgba(75, 80, 49, 0.3);
+            border-radius: 8px;
+            font-size: 14px;
+            background: white;
+            transition: border-color 0.25s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #9A6E0E;
+            box-shadow: 0 0 0 3px rgba(154, 110, 14, 0.12);
+        }
+
+        .events-selection {
+            margin-bottom: 22px;
+        }
+
+        .events-selection h4 {
+            color: #4B5031;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+
+        .event-checkbox {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            padding: 12px;
+            background: rgba(234, 228, 206, 0.22);
+            border-radius: 8px;
+            transition: background-color 0.25s ease;
+        }
+
+        .event-checkbox:hover {
+            background: rgba(234, 228, 206, 0.3);
+        }
+
+        .event-checkbox input[type="checkbox"] {
+            margin-right: 10px;
+            margin-top: 3px;
+            transform: scale(1.15);
+            accent-color: #9A6E0E;
+        }
+
+        .event-info-small {
+            flex: 1;
+        }
+
+        .event-title-small {
+            font-weight: 600;
+            color: #4B5031;
+            margin-bottom: 4px;
+        }
+
+        .event-meta-small {
+            font-size: 12px;
+            color: #4B5031;
+            opacity: 0.75;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        .form-btn {
+            flex: 1;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .form-btn.primary {
+            background: linear-gradient(135deg, #9A6E0E 0%, #BB823A 100%);
+            color: white;
+        }
+
+        .form-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(154, 110, 14, 0.3);
+        }
+
+        .form-btn.secondary {
+            background: #f5f5f5;
+            color: #4B5031;
+            border: 1px solid rgba(75, 80, 49, 0.3);
+        }
+
+        .form-btn.secondary:hover {
+            background: #e5e5e5;
+        }
+
+        .close-form {
+            position: absolute;
+            top: 12px;
+            right: 18px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #4B5031;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.25s ease;
+        }
+
+        .close-form:hover {
+            opacity: 1;
+        }
+
+        .form-message {
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .form-message.success {
+            background: rgba(40, 167, 69, 0.1);
+            color: #28a745;
+            border: 1px solid rgba(40, 167, 69, 0.3);
+        }
+
+        .form-message.error {
+            background: rgba(220, 53, 69, 0.1);
+            color: #dc3545;
+            border: 1px solid rgba(220, 53, 69, 0.3);
+        }
+
+        .promo-badge {
+            background: linear-gradient(135deg, #959D6B 0%, #6F763B 100%);
+            color: white;
+            padding: 14px 18px;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(149, 157, 107, 0.3);
+            animation: pulse-promo 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-promo {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .nav-container {
+                padding: 0 20px;
+            }
+            .hero-content {
+                padding: 0 20px;
+            }
+            .hero-cta {
+                flex-direction: column;
+            }
+            .cta-button {
+                width: 100%;
+                max-width: 280px;
+            }
+            .welcome-section {
+                padding: 70px 20px 50px;
+            }
+            .section {
+                padding: 60px 20px;
+            }
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+            .event-card {
+                padding: 28px 20px;
+            }
+            .event-header {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .event-info {
+                margin-left: 0;
+            }
+            .map-info {
+                grid-template-columns: 1fr;
+            }
+            .booking-section {
+                bottom: 90px;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #welcome { scroll-margin-top: 80px; }
+        #mensili { scroll-margin-top: 80px; }
+        #mappa { scroll-margin-top: 80px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- NAV -->
+        <nav class="nav" id="mainNav">
+            <div class="nav-container">
+<div class="logo">
+    <img src="assets/LIBRA LOGOTIPO 1 PNG_Tavola disegno 1.png" alt="Libra Terra Creativa" class="logo-img">
+    <span class="tagline">terra creativa</span>
+</div>
+                <div class="nav-menu">
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#welcome" class="nav-link">Chi Siamo</a>
+    <a href="#mensili" class="nav-link">Eventi Dicembre</a>
+    <a href="#settimanali" class="nav-link">Eventi Settimanali</a>
+    <a href="#mappa" class="nav-link">Contatti</a>
+</div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            </div>
+        </nav>
+
+<div class="mobile-nav" id="mobileNav">
+    <a href="#home" onclick="closeMobileMenu()">Home</a>
+    <a href="#welcome" onclick="closeMobileMenu()">Chi Siamo</a>
+    <a href="#mensili" onclick="closeMobileMenu()">Eventi Dicembre</a>
+    <a href="#settimanali" onclick="closeMobileMenu()">Eventi Settimanali</a>
+    <a href="#mappa" onclick="closeMobileMenu()">Contatti</a>
+</div>
+
+        <!-- HERO DICEMBRE -->
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <img src="assets/LIBRA PITTOGRAMMA PNG_Tavola disegno 1.png" alt="Libra Terra Creativa"
+     style="height:200px;width:auto;margin-bottom:10px;">
+                <p class="hero-text">
+                    L’inverno entra a Libra con brunch caldi, cene d’inverno, laboratori, cerchi sonori e pratiche di respiro.  
+                    Un mese per <em>rallentare, nutrirti e ritrovare radici</em> tra arte, cibo vegetale e rituali condivisi.
+                </p>
+                <div class="hero-cta">
+                    <a href="#mensili" class="cta-button">Scopri gli Eventi di Dicembre</a>
+                    <a href="#mappa" class="cta-button secondary">Come Raggiungerci</a>
+                </div>
+                <p class="hero-caption">
+                    Dal 6 al 28 dicembre · Pietrasanta
+                </p>
+            </div>
+            <div class="scroll-indicator" onclick="scrollToSection('welcome')">
+                <svg viewBox="0 0 24 24" width="30" height="30">
+                    <polyline points="6 9 12 15 18 9" stroke="#9A6E0E" stroke-width="2" fill="none"></polyline>
+                </svg>
+            </div>
+        </section>
+
+        <!-- WELCOME (puoi riusare il tuo testo) -->
+        <section class="welcome-section" id="welcome">
+            <div class="welcome-container">
+                <h2 class="welcome-title">Welcome</h2>
+                <p class="welcome-text">
+                    <strong>Libra Terra Creativa</strong> è uno spazio dove l’inverno diventa occasione per ritrovarsi, dentro e fuori.  
+                    Tra brunch vegetali, cerchi di voce, pratiche di respiro, numerologia, arte e ceramica, dicembre diventa un invito a rallentare.
+                </p>
+                <p class="welcome-text">
+                    Ogni evento è pensato come un piccolo rito: un tempo dedicato a te, alle relazioni e alla cura.  
+                    Dalla tavola alle pratiche corporee, dalla voce al suono, ciò che succede a Libra nasce per nutrire presenza e connessione.
+                </p>
+                <p class="signature">
+                    Simone e Silvia
+                </p>
+            </div>
+        </section>
+        
+        <!-- TITOLONE MESE -->
+        <div class="simple-header">
+            <h1>Eventi Dicembre 2025</h1>
+            <p>Appuntamenti speciali del mese · Libra Terra Creativa</p>
+        </div>
+
+<!-- EVENTI SETTIMANALI (come novembre) -->
+<section class="section" id="settimanali">
+    <div class="section-header">
+        <h2 class="section-title">Eventi Settimanali</h2>
+        <p class="section-subtitle">Appuntamenti fissi ogni settimana</p>
+    </div>
+    
+    <div class="events-grid">
+        <div class="event-card recurring-event">
+            <div class="event-header">
+                <div class="event-date">Lun–Sab</div>
+                <div class="event-info">
+                    <h3 class="event-title">Allenamento Funzionale Personalizzato</h3>
+                    <div class="event-instructor">con Simone</div>
+                </div>
+            </div>
+            <div class="event-meta">
+                <span class="meta-badge">Su appuntamento</span>
+                <span class="meta-badge">50€/h individuale</span>
+                <span class="meta-badge">25€/h in coppia</span>
+            </div>
+            <div class="event-description">
+                Un percorso di movimento personalizzato che va oltre il semplice allenamento. Attraverso un approccio chinesiologico, ogni sessione è studiata per riequilibrare, riabilitare quando necessario e potenziare nelle fasi avanzate.
+            </div>
+            <a href="https://wa.me/393345957023?text=Ciao! Vorrei maggiori informazioni sull'Allenamento Funzionale Personalizzato"
+               class="book-button">
+                Prenota Ora
+            </a>
+        </div>
+
+        <div class="event-card recurring-event">
+            <div class="event-header">
+                <div class="event-date">Lun</div>
+                <div class="event-info">
+                    <h3 class="event-title">Hatha Yoga</h3>
+                    <div class="event-instructor">con Silvia</div>
+                </div>
+            </div>
+            <div class="event-meta">
+                <span class="meta-badge">Lunedì 18:00</span>
+                <span class="meta-badge">15€</span>
+                <span class="meta-badge">Sessione inclusiva</span>
+            </div>
+            <div class="event-description">
+                Yoga terapeutico per il pavimento pelvico. Perfetto per donne in gravidanza, mamme con bimbi fino ai 7 mesi e per chi desidera una pratica lenta di Hatha Yoga con focus sul benessere pelvico.
+            </div>
+            <a href="https://wa.me/393491408666?text=Ciao! Vorrei prenotare Hatha Yoga del lunedì"
+               class="book-button">
+                Prenota Ora
+            </a>
+        </div>
+     
+        <div class="event-card recurring-event">
+            <div class="event-header">
+                <div class="event-date">Mer</div>
+                <div class="event-info">
+                    <h3 class="event-title">Pilates</h3>
+                    <div class="event-instructor">con Francesca Parrini</div>
+                </div>
+            </div>
+            <div class="event-meta">
+                <span class="meta-badge">Mercoledì 13:30–14:30</span>
+                <span class="meta-badge">15€</span>
+            </div>
+            <div class="event-description">
+                Rafforza il tuo corpo e migliora la postura. Una pratica che unisce forza, flessibilità e controllo per ritrovare il tuo centro.
+            </div>
+            <a href="https://wa.me/393491408666?text=Ciao! Vorrei prenotare Pilates del mercoledì"
+               class="book-button">
+                Prenota Ora
+            </a>
+        </div>
+
+        <div class="event-card recurring-event">
+                    <div class="event-header">
+                        <div class="event-date">Dom</div>
+                        <div class="event-info">
+                            <h3 class="event-title">🏺 Corso di Ceramica</h3>
+                            <div class="event-instructor">con Linda Bianchi Cervini</div>
+                        </div>
+                    </div>
+                    <div class="event-meta">
+                        <span class="meta-badge">11:00-14:00</span>
+                        <span class="meta-badge">40€</span>
+                    </div>
+                    <div class="event-description">
+                        Un viaggio creativo dove le tue mani incontrano l'argilla in un dialogo silenzioso e profondo. Linda Bianchi ti accompagnerà nella scoperta di questa antica arte, trasformando la materia grezza in espressioni uniche della tua creatività. Due appuntamenti settimanali per dare forma ai tuoi pensieri e liberare l'artista che vive in te.
+                    </div>
+                    <a href="https://wa.me/393491408666?text=Ciao! Vorrei maggiori informazioni sul Corso di Ceramica con Linda" class="book-button">
+                        Maggiori Info
+                    </a>
+                </div>
+    </div>
+</section>
+
 <!-- EVENTI MENSILI GENNAIO -->
 <section class="section" id="mensili">
   <div class="section-header">
@@ -336,3 +1537,374 @@
 
   </div>
 </section>
+
+
+        <!-- MAPPA / CONTATTI (copiata da novembre, puoi adattare) -->
+        <section class="section" id="mappa">
+            <div class="map-section">
+                <h3 class="map-title">Come Raggiungerci</h3>
+                <div class="map-info">
+                    <div class="location-details">
+                        <h4>Indirizzo</h4>
+                        <p><strong>Via Santa Maria 33</strong><br>Pietrasanta, Lucca (LU), Italy</p>
+
+                        <h4>Contatti</h4>
+                        <p>
+                            <strong>WhatsApp:</strong> +39 349 140 8666<br>
+                            <strong>Email:</strong> librapietrasanta@gmail.com<br>
+                            <strong>Instagram:</strong> @librapietrasanta
+                        </p>
+
+                        <h4>Note</h4>
+                        <p>
+                            Nel centro storico di Pietrasanta, facilmente raggiungibile a piedi dalla stazione.
+                            Parcheggi disponibili nelle vicinanze.
+                        </p>
+                    </div>
+
+                    <div class="map-embed">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.4!2d10.2289!3d43.9596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d4f0c8f5e9c123%3A0x1a2b3c4d5e6f7890!2sVia%20Santa%20Maria%2C%20Pietrasanta%20LU%2C%20Italy!5e0!3m2!1sit!2sit!4v1693234567890"
+                            width="100%"
+                            height="300"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER (stesso del novembre) -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h3>Navigazione</h3>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#welcome">Chi Siamo</a></li>
+                            <li><a href="#mensili">Eventi Dicembre</a></li>
+                            <li><a href="#mappa">Contatti</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Contatti</h3>
+                        <p style="color: #EAE4CE; line-height: 1.8;">
+                            Via Santa Maria 33<br>
+                            Pietrasanta, Lucca<br>
+                            <a href="tel:+393491408666">+39 349 140 8666</a><br>
+                            <a href="mailto:librapietrasanta@gmail.com">librapietrasanta@gmail.com</a>
+                        </p>
+                        <div class="social-links">
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/librapietrasanta" target="_blank" class="social-link">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                                </svg>
+                            </a>
+                            <!-- WhatsApp -->
+                            <a href="https://wa.me/393491408666" target="_blank" class="social-link">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.539c-.103.348.257.691.605.588l4.715-1.394A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.642-.5-5.168-1.361l-3.638 1.075 1.091-3.56A9.962 9.962 0 0 1 2 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/>
+                                </svg>
+                            </a>
+                            <!-- Email -->
+                            <a href="mailto:librapietrasanta@gmail.com" class="social-link">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Orari</h3>
+                        <p style="color: #EAE4CE; line-height: 1.8;">
+                            <strong>Eventi su prenotazione</strong><br>
+                            Lunedì - Domenica<br><br>
+                            Prenotazione obbligatoria<br>
+                            con 48 ore di anticipo
+                        </p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Resta Aggiornato</h3>
+                        <p style="color: #EAE4CE; margin-bottom: 16px;">
+                            Unisciti al nostro canale Telegram per ricevere aggiornamenti settimanali sugli eventi.
+                        </p>
+                        <a href="https://t.me/+ZI55kD1rIlM0MTBk"
+                           target="_blank"
+                           class="book-button"
+                           style="background:#0088cc;padding:11px 22px;font-size:14px;">
+                            Unisciti al Canale
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Libra Terra Creativa. Tutti i diritti riservati. | Via Santa Maria 33, Pietrasanta</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- BOTTONI FISSI -->
+    <a href="https://wa.me/393491408666?text=Ciao! Ho una domanda sugli eventi di dicembre"
+       class="whatsapp-float"
+       target="_blank"
+       aria-label="Contattaci su WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.539c-.103.348.257.691.605.588l4.715-1.394A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.642-.5-5.168-1.361l-3.638 1.075 1.091-3.56A9.962 9.962 0 0 1 2 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/>
+        </svg>
+    </a>
+
+    <div class="booking-section">
+        <button class="booking-toggle" id="bookingToggleBtn">
+            Prenota Attività
+        </button>
+    </div>
+
+    <!-- MODAL PRENOTAZIONE -->
+    <div class="booking-form-container" id="bookingFormContainer">
+        <form class="booking-form" id="bookingForm">
+            <button type="button" class="close-form" id="closeFormBtn">&times;</button>
+
+            <div class="form-header">
+                <h3>Prenota i Tuoi Eventi di Dicembre</h3>
+                <p style="color:#4B5031;opacity:0.8;">Seleziona uno o più eventi e compila i tuoi dati</p>
+            </div>
+
+            <div class="promo-badge">
+                🎉 Prenota 3 o più eventi di dicembre e ricevi il 10% di sconto!
+            </div>
+
+            <div id="formMessage"></div>
+
+            <div class="form-group">
+                <label for="user_name">Nome Completo *</label>
+                <input type="text" id="user_name" name="user_name" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label for="user_email">Email *</label>
+                <input type="email" id="user_email" name="user_email" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label for="user_phone">Telefono *</label>
+                <input type="tel" id="user_phone" name="user_phone" class="form-input" required>
+            </div>
+
+            <div class="events-selection" id="eventsSelection">
+                <h4>Seleziona Eventi:</h4>
+                <!-- Eventi popolati da JavaScript -->
+            </div>
+
+            <div class="form-group">
+                <label for="message">Note aggiuntive (opzionale)</label>
+                <textarea id="message" name="message" class="form-input" rows="3" placeholder="Richieste particolari, allergie, ecc..."></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="form-btn secondary" id="cancelFormBtn">Annulla</button>
+                <button type="submit" class="form-btn primary" id="submitBtn">Invia Prenotazione</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- SCRIPT EMAILJS + LOGICA FORM (stessa struttura di novembre, ma con eventsData di dicembre) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Eventi Dicembre 2025 – per il form di prenotazione
+        const eventsData = [
+            { id: 'dic_disegno_colazione', date: 6, title: 'Disegno dal Vero & Colazione con Modella', meta: '6 dicembre · 10:30-13:00 · 10€ · con Maria Fontana', value: 'Disegno dal Vero & Colazione con Modella · 6/12 · 10:30-13:00 (10€)' },
+            { id: 'dic_centro_tavola', date: 6, title: 'Centro Tavola Natalizio', meta: '6 dicembre · dalle 15:30 · 45€ (+5€ degustazione) · Galleria Bellina', value: 'Centro Tavola Natalizio · 6/12 · dalle 15:30 (45€ + 5€ opz.)' },
+            { id: 'dic_in_contatto', date: 6, title: 'IN CON-TATTO', meta: '6 dicembre · tre turni 9-36 mesi · 10€ · con Ilaria Marracci', value: 'IN CON-TATTO · 6/12 · 3 turni 9–36 mesi (10€)' },
+            { id: 'dic_degustazione_pan', date: 6, title: 'Degustazione Pan di Luna', meta: '6 dicembre · 15:30-17:30 · 15€ · Pan di Luna', value: 'Degustazione Pan di Luna · 6/12 · 15:30-17:30 (15€)' },
+            { id: 'dic_numerologia', date: 6, title: 'Numerologia per l\'Anima', meta: '6 dicembre · 16:00-18:00 · 25€ · con Tania Giannecchini', value: 'Numerologia per l\'Anima · 6/12 · 16:00-18:00 (25€)' },
+
+            { id: 'dic_brunch_7', date: 7, title: 'Brunch by Amasia', meta: '7 dicembre · 11:00-15:00 · 35€ · Amasia', value: 'Brunch by Amasia · 7/12 · 11:00-15:00 (35€)' },
+            { id: 'dic_yoga_cucina', date: 7, title: 'Yoga Flow con Cucina a Vista', meta: '7 dicembre · 10:30-11:30 + brunch · 20€ pratica yoga', value: 'Yoga Flow con Cucina a Vista · 7/12 · 10:30-11:30 (20€)' },
+
+            { id: 'dic_radici', date: 8, title: 'Radici d\'Inverno', meta: '8 dicembre · dalle 20:00 · 55€ · Cena by Amasia', value: 'Radici d\'Inverno · 8/12 · dalle 20:00 (55€)' },
+            { id: 'dic_ceramica_natale', date: 8, title: 'Corso di Ceramica · Natale', meta: '8 dicembre · 15:00-18:00 · 40€ · con Linda Bianchi Cervini', value: 'Corso di Ceramica Natale · 8/12 · 15:00-18:00 (40€)' },
+
+            { id: 'dic_sciamanesimo2', date: 10, title: 'Sciamanesimo Contemporaneo · Incontro 2 di 3', meta: '10 dicembre · 18:30-20:30 · 35€ · con Beatrice Reglieri', value: 'Sciamanesimo Contemporaneo 2/3 · 10/12 · 18:30-20:30 (35€)' },
+
+            { id: 'dic_libro_miro', date: 12, title: 'Presentazione libro “Il miracolo sei tu”', meta: '12 dicembre · 17:00-18:00 · ingresso libero · con Lia Miro', value: 'Presentazione libro · 12/12 · 17:00-18:00 (ingresso libero)' },
+
+            { id: 'dic_respiro', date: 13, title: 'Dal Respiro all\'Ascolto di Sé', meta: '13 dicembre · 9:00-13:00 · 110€ · con Daniele Boldrini', value: 'Dal Respiro all\'Ascolto di Sé · 13/12 · 9:00-13:00 (110€)' },
+            { id: 'dic_canto_anima', date: 13, title: 'Canto dell\'Anima', meta: '13 dicembre · 15:00-17:00 · 45€ · con Andrea Parigi', value: 'Canto dell\'Anima · 13/12 · 15:00-17:00 (45€)' },
+            { id: 'dic_lasagne', date: 13, title: 'Lasagne · Serata Musicale', meta: '13 dicembre · dalle 20:00 · 45€ · Libra', value: 'Lasagne · Serata Musicale · 13/12 · dalle 20:00 (45€)' },
+
+            { id: 'dic_wimhof', date: 14, title: 'Wim Hof Method · Fundamentals', meta: '14 dicembre · 9:00-15:00 · 99€ · con Andrea Bianchi', value: 'Wim Hof Method Fundamentals · 14/12 · 9:00-15:00 (99€)' },
+
+            { id: 'dic_alimentazione3', date: 15, title: 'Incontri di Buona Alimentazione · 3°', meta: '15 dicembre · 18:00-20:00 · 25€ · con Dott.ssa Francesca Ciuffi', value: 'Buona Alimentazione 3° incontro · 15/12 · 18:00-20:00 (25€)' },
+
+            { id: 'dic_disegno_20', date: 20, title: 'Disegno dal Vero con Modella', meta: '20 dicembre · 16:00-18:00 · 10€ · con Maria Fontana', value: 'Disegno dal Vero con Modella · 20/12 · 16:00-18:00 (10€)' },
+
+            { id: 'dic_brunch_21', date: 21, title: 'Brunch by Amasia', meta: '21 dicembre · 11:00-15:00 · 35€ · Amasia', value: 'Brunch by Amasia · 21/12 · 11:00-15:00 (35€)' },
+            { id: 'dic_psicofonia21', date: 21, title: 'Incontro di Psicofonia', meta: '21 dicembre · 17:30-19:30 · 30€', value: 'Incontro di Psicofonia · 21/12 · 17:30-19:30 (30€)' },
+
+            { id: 'dic_arteterapia', date: 28, title: 'Laboratorio di Arteterapia', meta: '28 dicembre · 10:30-11:30 · 15€ · con Ilaria Marracci', value: 'Laboratorio di Arteterapia · 28/12 · 10:30-11:30 (15€)' },
+            { id: 'dic_deg_pan_28', date: 28, title: 'Degustazione Pan di Luna', meta: '28 dicembre · 15:30-17:30 · 15€ · Pan di Luna', value: 'Degustazione Pan di Luna · 28/12 · 15:30-17:30 (15€)' },
+            { id: 'dic_panificazione', date: 28, title: 'Corso di Panificazione', meta: '28 dicembre · 16:00-19:00 · 50€ · con Andrea Rossi', value: 'Corso di Panificazione · 28/12 · 16:00-19:00 (50€)' },
+        ];
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobileNav').classList.remove('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Nav scroll effect
+            window.addEventListener('scroll', function() {
+                const nav = document.getElementById('mainNav');
+                if (window.scrollY > 50) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+
+            // Parallax hero
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const heroContent = document.querySelector('.hero-content');
+                if (heroContent && scrolled < window.innerHeight) {
+                    heroContent.style.transform = `translateY(${scrolled * 0.4}px)`;
+                    heroContent.style.opacity = 1 - (scrolled / window.innerHeight * 0.4);
+                }
+            });
+
+            // EmailJS init (mantieni le tue chiavi)
+            emailjs.init("3LZyp-vRsblaN_zcY");
+
+            function populateEventsInForm() {
+                const eventsSelection = document.getElementById('eventsSelection');
+                const headerHTML = eventsSelection.querySelector('h4').outerHTML;
+                let eventCheckboxes = '';
+
+                eventsData.forEach(event => {
+                    eventCheckboxes += `
+                        <div class="event-checkbox">
+                            <input type="checkbox" id="${event.id}" name="selected_events" value="${event.value}">
+                            <div class="event-info-small">
+                                <div class="event-title-small">${event.title}</div>
+                                <div class="event-meta-small">${event.meta}</div>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                eventsSelection.innerHTML = headerHTML + eventCheckboxes;
+            }
+
+            populateEventsInForm();
+
+            function openBookingForm() {
+                document.getElementById('bookingFormContainer').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeBookingForm() {
+                document.getElementById('bookingFormContainer').classList.remove('active');
+                document.body.style.overflow = 'auto';
+                document.getElementById('formMessage').innerHTML = '';
+                document.getElementById('bookingForm').reset();
+            }
+
+            function showMessage(message, type) {
+                const messageDiv = document.getElementById('formMessage');
+                messageDiv.innerHTML = `<div class="form-message ${type}">${message}</div>`;
+            }
+
+            document.getElementById('bookingToggleBtn').addEventListener('click', openBookingForm);
+            document.getElementById('closeFormBtn').addEventListener('click', closeBookingForm);
+            document.getElementById('cancelFormBtn').addEventListener('click', closeBookingForm);
+
+            document.getElementById('bookingForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const submitBtn = document.getElementById('submitBtn');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = 'Invio in corso...';
+                submitBtn.disabled = true;
+
+                const selectedEvents = [];
+                const checkboxes = document.querySelectorAll('input[name="selected_events"]:checked');
+                checkboxes.forEach(cb => selectedEvents.push(cb.value));
+
+                if (selectedEvents.length === 0) {
+                    showMessage('Seleziona almeno un evento per continuare.', 'error');
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    return;
+                }
+
+                const templateParams = {
+                    user_name: document.getElementById('user_name').value,
+                    user_email: document.getElementById('user_email').value,
+                    user_phone: document.getElementById('user_phone').value,
+                    selected_events: selectedEvents.join('\n'),
+                    message: document.getElementById('message').value || 'Nessuna nota aggiuntiva',
+                    to_email: 'librapietrasanta@gmail.com',
+                    booking_date: new Date().toLocaleDateString('it-IT'),
+                    booking_time: new Date().toLocaleTimeString('it-IT')
+                };
+
+                emailjs.send('service_epmymzx', 'template_vdmqqm3', templateParams)
+                    .then(function() {
+                        const confirmationParams = {
+                            ...templateParams,
+                            to_email: templateParams.user_email
+                        };
+                        return emailjs.send('service_epmymzx', 'template_fmudhsj', confirmationParams);
+                    })
+                    .then(function() {
+                        showMessage('Richiesta di prenotazione inviata con successo! Ti contatteremo a breve per confermare i dettagli.', 'success');
+                        setTimeout(() => { closeBookingForm(); }, 2000);
+                    })
+                    .catch(function(error) {
+                        console.error('EmailJS error:', error);
+                        showMessage('Errore nell\'invio. Prova a contattarci via WhatsApp: +39 349 140 8666', 'error');
+                    })
+                    .finally(function() {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    });
+            });
+
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                    closeMobileMenu();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
