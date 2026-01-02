@@ -533,6 +533,70 @@
     transform: translateX(2px);
 }
 
+        .categories-accordion {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.category-item {
+  border-radius: 14px;
+  border: 1px solid rgba(75, 80, 49, 0.12);
+  background: rgba(255,255,255,0.86);
+  box-shadow: 0 10px 28px rgba(75,80,49,0.12);
+  overflow: hidden;
+}
+
+.category-header {
+  width: 100%;
+  padding: 16px 22px;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #9A6E0E;
+  cursor: pointer;
+  text-align: left;
+}
+
+.category-header span:first-child {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.category-icon {
+  font-size: 1.2rem;
+  color: #4B5031;
+  transition: transform 0.25s ease;
+}
+
+.category-item.open .category-icon {
+  transform: rotate(45deg);
+}
+
+.category-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  padding: 0 22px;
+}
+
+.category-item.open .category-panel {
+  padding-bottom: 18px;
+}
+
+/* su mobile, grid a una colonna anche dentro il pannello */
+@media (max-width: 768px) {
+  .categories-accordion .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
         /* HEADER SEMPLICE PER MESE */
 
@@ -1532,6 +1596,413 @@
   </div>
 </section>
 
+        <!-- EVENTI PER CATEGORIA (A TENDINA) -->
+<section class="section" id="categorie">
+  <div class="section-header">
+    <h2 class="section-title">Esplora per Atmosfera</h2>
+    <p class="section-subtitle">
+      Cibo &amp; cucina vegetale, corpo &amp; respiro, percorsi interiori, arte e bimbi.
+      Apri le sezioni per vedere gli eventi collegati.
+    </p>
+  </div>
+
+  <div class="categories-accordion">
+
+    <!-- CIBO & CUCINA -->
+    <div class="category-item">
+      <button class="category-header" data-category-toggle="cibo">
+        <span>Cibo &amp; Cucina vegetale</span>
+        <span class="category-icon">+</span>
+      </button>
+      <div class="category-panel">
+        <div class="events-grid">
+
+          <!-- Corso di Cucina Vegetale & Aperitivo -->
+          <div class="event-card special-event">
+            <div class="event-header">
+              <div class="event-date">17<br>Sab</div>
+              <div class="event-info">
+                <h3 class="event-title">Corso di Cucina Vegetale &amp; Aperitivo</h3>
+                <div class="event-instructor">con Alfredo d’Adamo</div>
+              </div>
+            </div>
+            <div class="event-meta">
+              <span class="meta-badge">Sabato 17 gennaio</span>
+              <span class="meta-badge">15:00–19:00 · a seguire aperitivo</span>
+            </div>
+            <div class="event-description">
+              Un cooking class dedicato alla cucina vegetale italiana: tecnica, stagionalità e
+              creatività contadina. Dal banco di lavoro all’aperitivo finale, un percorso per
+              scoprire come ortaggi, legumi e cereali possano diventare piatti profondi e conviviali.
+            </div>
+            <a href="https://wa.me/393491408666?text=Ciao%20Libra%2C%20vorrei%20info%2C%20prezzi%20e%20prenotare%20il%20Corso%20di%20Cucina%20Vegetale%20del%2017%20gennaio."
+               class="book-button">
+              Info, prezzi e prenotazioni
+            </a>
+          </div>
+
+          <!-- Lotteria & Aperitivo Surforall -->
+          <div class="event-card special-event">
+            <div class="event-header">
+              <div class="event-date">18<br>Dom</div>
+              <div class="event-info">
+                <h3 class="event-title">Lotteria &amp; Aperitivo Surforall</h3>
+                <div class="event-instructor">in collaborazione con Surforall</div>
+              </div>
+            </div>
+            <div class="event-meta">
+              <span class="meta-badge">Domenica 18 gennaio</span>
+              <span class="meta-badge">18:00–22:00</span>
+            </div>
+            <div class="event-description">
+              Una serata per sostenere i progetti di surf e skate adattivi di Surforall,
+              tra brindisi, incontri e premi speciali. In palio una tavola da surf unica
+              firmata Panichi × MOJI × Surforall.
+            </div>
+            <a href="https://wa.me/393491408666?text=Ciao%20Libra%2C%20vorrei%20info%2C%20prezzi%20e%20prenotare%20per%20la%20Lotteria%20Surforall%20del%2018%20gennaio."
+               class="book-button">
+              Info, prezzi e prenotazioni
+            </a>
+          </div>
+
+          <!-- Corso di Fermentazione · Kombucha -->
+          <div class="event-card special-event">
+            <div class="event-header">
+              <div class="event-date">31<br>Sab</div>
+              <div class="event-info">
+                <h3 class="event-title">Corso di Fermentazione · Kombucha</h3>
+                <div class="event-instructor">con Andrea Rossi</div>
+              </div>
+            </div>
+            <div class="event-meta">
+              <span class="meta-badge">Sabato 31 gennaio</span>
+              <span class="meta-badge">15:00–18:00</span>
+            </div>
+            <div class="event-description">
+              Un laboratorio per entrare nel mondo vivo della fermentazione, a partire dal Kombucha.
+              Tra microbiologia, pratica e degustazione imparerai come i microrganismi possano
+              diventare alleati di salute, gusto e rigenerazione del suolo e dell’ambiente.
+            </div>
+            <a href="https://wa.me/393491408666?text=Ciao%20Libra%2C%20vorrei%20info%2C%20prezzi%20e%20prenotare%20il%20Corso%20di%20Fermentazione%20-%20Kombucha%20del%2031%20gennaio."
+               class="book-button">
+              Info, prezzi e prenotazioni
+            </a>
+          </div>
+
+          <!-- Cena Amasia -->
+          <div class="event-card special-event">
+            <div class="event-header">
+              <div class="event-date">31<br>Dom</div>
+              <div class="event-info">
+                <h3 class="event-title">Cena Amasia da Libra</h3>
+                <div class="event-instructor">Amasia · Libra Terra Creativa</div>
+              </div>
+            </div>
+            <div class="event-meta">
+              <span class="meta-badge">Domenica 31 gennaio</span>
+              <span class="meta-badge">Dalle 20:00</span>
+              <span class="meta-badge">Cucina vegetale creativa</span>
+            </div>
+            <div class="event-description">
+              Una cena a più portate firmata Amasia nello spazio di Libra: cucina vegetale
+              raffinata, atmosfera intima e ritmo lento per chiudere gennaio celebrando
+              cibo, relazione e bellezza condivisa.
+            </div>
+            <a href="https://wa.me/393491408666?text=Ciao%20Libra%2C%20vorrei%20info%2C%20prezzi%20e%20prenotare%20la%20Cena%20Amasia%20del%2031%20gennaio."
+               class="book-button">
+              Info, prezzi e prenotazioni
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- CORPO, RESPIRO & SUONO -->
+    <div class="category-item">
+      <button class="category-header" data-category-toggle="corpo">
+        <span>Corpo, Respiro &amp; Suono</span>
+        <span class="category-icon">+</span>
+      </button>
+      <div class="category-panel">
+        <div class="events-grid">
+
+          <!-- Wim Hof Method -->
+          <div class="event-card special-event">
+            <div class="event-header">
+              <div class="event-date">25<br>Dom</div>
+              <div class="event-info">
+                <h3 class="event-title">Wim Hof Method · Fundamentals Workshop</h3>
+                <div class="event-instructor">con Andrea Bianchi</div>
+              </div>
+            </div>
+            <div class="event-meta">
+              <span class="meta-badge">Domenica 25 gennaio</span>
+              <span class="meta-badge">9:00–15:00</span>
+            </div>
+            <div class="event-description">
+              Un’introduzione guidata ai tre pilastri del Metodo Wim Hof: respirazione,
+              freddo consapevole e mindset. Teoria, sessioni di respiro, movimento preparatorio
+              e, per chi lo desidera, bagno ghiacciato per allenare forza interiore e presenza.
+            </div>
+            <a href="https://wa.me/393491408666?text=Ciao%20Libra%2C%20vorrei%20info%2C%20prezzi%20e%20prenotare%20il%20Wim%20Hof%20Method%20Fundamentals%20del%2025%20gennaio."
+               class="book-button">
+              Info, prezzi e prenotazioni
+            </a>
+          </div>
+
+          <!-- Sound Bath 16 + 30 (puoi citare entrambi) -->
+          <div class="event-card special-event">
+            <div class="event-header">
+              <div class="event-date">16 &amp; 30<br>Ven</div>
+              <div class="event-info">
+                <h3 class="event-title">Sound Bath Sciamanico</h3>
+                <div class="event-instructor">con Filippo Curto “Gentlehawk”</div>
+              </div>
+            </div>
+            <div class="event-meta">
+              <span class="meta-badge">Venerdì 16 e 30 gennaio</span>
+              <span class="meta-badge">18:00–20:00</span>
+            </div>
+            <div class="event-description">
+              Bagni di suono immersivi con gong, campane e canti sciamanici per lasciare
+              andare tensioni e riaccordare il sistema nervoso. Ogni sessione è diversa,
+              perché diverso è il momento che stai attraversando.
+            </div>
+            <a href="https://wa.me/393491408666?text=Ciao%20Libra%2C%20vorrei%20info%2C%20prezzi%20e%20prenotare%20il%20Sound%20Bath%20Sciamanico%20di%20gennaio."
+               class="book-button">
+              Info, prezzi e prenotazioni
+            </a>
+          </div>
+
+          <!-- Tera Mai Reiki -->
+          <div class="event-card">
+            <div class="event-header">
+              <div class="event-date">24<br>Sab</div>
+              <div class="event-info">
+                <h3 class="event-title">Tera Mai Reiki · Corso e Attivazione 1° livello</h3>
+                <div class="event-instructor">con Claudia Tani</div>
+              </div>
+            </div>
+            <div class="event-meta">
+              <span class="meta-badge">Sabato 24 gennaio</span>
+              <span class="meta-badge">9:30–18:30</span>
+            </div>
+            <div class="event-description">
+              Una giornata intensiva per conoscere il sistema di guarigione naturale Tera Mai Reiki
+              e Seichem. Tra teoria, pratica e attivazione imparerai a canalizzare energia
+              universale per prenderti cura di te e, quando vorrai, degli altri.
+            </div>
+            <a href="https://wa.me/393491408666?text=Ciao%20Libra%2C%20vorrei%20info%2C%20prezzi%20e%20prenotare%20il%20corso%20Tera%20Mai%20Reiki%20del%2024%20gennaio."
+               class="book-button">
+              Info, prezzi e prenotazioni
+            </a>
+          </div>
+
+          <!-- Allenamento Funzionale + Hatha Yoga come blocco continuativo -->
+          <div class="event-card recurring-event">
+            <div class="event-header">
+              <div class="event-date">Settimanale</div>
+              <div class="event-info">
+                <h3 class="event-title">Allenamento &amp; Yoga</h3>
+                <div class="event-instructor">con Simone &amp; Silvia</div>
+              </div>
+            </div>
+            <div class="event-meta">
+              <span class="meta-badge">Allenamento funzionale · lun–sab</span>
+              <span class="meta-badge">Hatha Yoga · ogni martedì</span>
+            </div>
+            <div class="event-description">
+              Due percorsi complementari per abitare meglio il corpo: allenamento funzionale
+              personalizzato con Simone e piccoli cerchi di Hatha Yoga con Silvia per gravidanza,
+              post‑parto e pratica aperta. Movimento come relazione, cura e ascolto.
+            </div>
+            <a href="https://wa.me/393491408666?text=Ciao%20Libra%2C%20vorrei%20info%2C%20prezzi%20e%20prenotare%20Allenamento%20Funzionale%20e%2Fo%20Hatha%20Yoga."
+               class="book-button">
+              Info, prezzi e prenotazioni
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- PSICOLOGIA & PERCORSI INTERIORI -->
+    <div class="category-item">
+      <button class="category-header" data-category-toggle="psiche">
+        <span>Psicologia &amp; Percorsi interiori</span>
+        <span class="category-icon">+</span>
+      </button>
+      <div class="category-panel">
+        <div class="events-grid">
+
+          <!-- Emozioni -->
+          <div class="event-card">
+            <div class="event-header">
+              <div class="event-date">18<br>Dom</div>
+              <div class="event-info">
+                <h3 class="event-title">Le Emozioni che Non Sappiamo Nominare</h3>
+                <div class="event-instructor">con Giada Boschetto</div>
+              </div>
+            </div>
+            <div class="event-meta">
+              <span class="meta-badge">Domenica 18 gennaio</span>
+              <span class="meta-badge">16:00–18:00</span>
+            </div>
+            <div class="event-description">
+              Un incontro di psicologia fuori dalla stanza di terapia, per dare forma
+              a quelle sfumature emotive che restano spesso mute. Con colori, segni e parole
+              imparerai a riconoscere ciò che si muove dentro di te quando la vita cambia.
+            </div>
+            <a href="https://wa.me/393491408666?text=Ciao%20Libra%2C%20vorrei%20info%2C%20prezzi%20e%20prenotare%20il%20workshop%20con%20Giada%20Boschetto%20del%2018%20gennaio."
+               class="book-button">
+              Info, prezzi e prenotazioni
+            </a>
+          </div>
+
+          <!-- Buona Alimentazione -->
+          <div class="event-card">
+            <div class="event-header">
+              <div class="event-date">19<br>Lun</div>
+              <div class="event-info">
+                <h3 class="event-title">Incontri di Buona Alimentazione · 4° Incontro</h3>
+                <div class="event-instructor">con Dott.ssa Francesca Ciuffi</div>
+              </div>
+            </div>
+            <div class="event-meta">
+              <span class="meta-badge">Lunedì 19 gennaio</span>
+              <span class="meta-badge">18:00–20:00</span>
+              <span class="meta-badge">Tema: “La buona colazione”</span>
+            </div>
+            <div class="event-description">
+              Una serata per rivedere il gesto della colazione come atto di cura.
+              Strumenti pratici e consapevolezza per costruire routine che sostengano
+              energia, stabilità e benessere lungo la giornata.
+            </div>
+            <a href="https://wa.me/393491408666?text=Ciao%20Libra%2C%20vorrei%20info%2C%20prezzi%20e%20prenotare%20il%204%C2%B0%20Incontro%20di%20Buona%20Alimentazione%20del%2019%20gennaio."
+               class="book-button">
+              Info, prezzi e prenotazioni
+            </a>
+          </div>
+
+          <!-- Sciamanesimo Contemporaneo -->
+          <div class="event-card">
+            <div class="event-header">
+              <div class="event-date">21<br>Mer</div>
+              <div class="event-info">
+                <h3 class="event-title">Sciamanesimo Contemporaneo · Incontro 3 di 3</h3>
+                <div class="event-instructor">con Beatrice Reglieri</div>
+              </div>
+            </div>
+            <div class="event-meta">
+              <span class="meta-badge">Mercoledì 21 gennaio</span>
+              <span class="meta-badge">18:00–20:00</span>
+            </div>
+            <div class="event-description">
+              Ultimo passo di un percorso in tre tappe dedicato al viaggio sciamanico.
+              Un rituale di restituzione dei doni per incontrare il tuo animale guida,
+              radicarti nella Madre Terra e chiudere il cammino in modo consapevole.
+            </div>
+            <a href="https://wa.me/393491408666?text=Ciao%20Libra%2C%20vorrei%20info%2C%20prezzi%20e%20prenotare%20Sciamanesimo%20Contemporaneo%20-%20Incontro%203%20di%203%20del%2021%20gennaio."
+               class="book-button">
+              Info, prezzi e prenotazioni
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ARTE, BIMBI & CREATIVITÀ -->
+    <div class="category-item">
+      <button class="category-header" data-category-toggle="arte">
+        <span>Arte, Bimbi &amp; Creatività</span>
+        <span class="category-icon">+</span>
+      </button>
+      <div class="category-panel">
+        <div class="events-grid">
+
+          <!-- Laboratorio Multisensoriale -->
+          <div class="event-card recurring-event">
+            <div class="event-header">
+              <div class="event-date">23<br>Ven</div>
+              <div class="event-info">
+                <h3 class="event-title">Laboratorio Multisensoriale per Bebè</h3>
+                <div class="event-instructor">con Dott.ssa Alice Vocaturo</div>
+              </div>
+            </div>
+            <div class="event-meta">
+              <span class="meta-badge">Venerdì 23 gennaio</span>
+              <span class="meta-badge">16:00–18:30</span>
+              <span class="meta-badge">Bimbi 0–12 mesi + genitori</span>
+            </div>
+            <div class="event-description">
+              Uno spazio pensato per i piccolissimi e per chi li accompagna, tra esplorazioni
+              tattili, luci, suoni e piccole scoperte. Un laboratorio per comprendere quali
+              stimoli sostenere nello sviluppo sensoriale del bambino e trasformarli in relazione.
+            </div>
+            <a href="https://wa.me/393491408666?text=Ciao%20Libra%2C%20vorrei%20info%2C%20prezzi%20e%20prenotare%20il%20Laboratorio%20Multisensoriale%20per%20Beb%C3%A8%20del%2023%20gennaio."
+               class="book-button">
+              Info, prezzi e prenotazioni
+            </a>
+          </div>
+
+          <!-- Arteterapia -->
+          <div class="event-card recurring-event">
+            <div class="event-header">
+              <div class="event-date">25<br>Dom</div>
+              <div class="event-info">
+                <h3 class="event-title">Laboratorio di Arteterapia · Come un Respiro d’Inverno</h3>
+                <div class="event-instructor">con Ilaria Marracci</div>
+              </div>
+            </div>
+            <div class="event-meta">
+              <span class="meta-badge">Domenica 25 gennaio</span>
+              <span class="meta-badge">16:30–18:30</span>
+            </div>
+            <div class="event-description">
+              Uno spazio per ritrovare bellezza nel minuscolo, giocando con pittura intuitiva,
+              colore e gesti semplici. Non serve alcuna competenza artistica: solo il desiderio
+              di respirare più piano e lasciare che i pensieri si sciolgano un po’.
+            </div>
+            <a href="https://wa.me/393491408666?text=Ciao%20Libra%2C%20vorrei%20info%2C%20prezzi%20e%20prenotare%20il%20Laboratorio%20di%20Arteterapia%20del%2025%20gennaio."
+               class="book-button">
+              Info, prezzi e prenotazioni
+            </a>
+          </div>
+
+          <!-- Corso di Ceramica -->
+          <div class="event-card recurring-event">
+            <div class="event-header">
+              <div class="event-date">Settimanale</div>
+              <div class="event-info">
+                <h3 class="event-title">Corso di Ceramica</h3>
+                <div class="event-instructor">con Linda Bianchi Cervini</div>
+              </div>
+            </div>
+            <div class="event-meta">
+              <span class="meta-badge">Organizzabile ogni settimana</span>
+              <span class="meta-badge">Durata 3 ore</span>
+            </div>
+            <div class="event-description">
+              Un laboratorio tra argilla, colore e presenza. In tre ore modellerai un piccolo
+              oggetto in ceramica, lo decorerai e, dopo la cottura, lo porterai a casa come
+              traccia tangibile del tuo tempo creativo.
+            </div>
+            <a href="https://wa.me/393491408666?text=Ciao%20Libra%2C%20vorrei%20info%2C%20prezzi%20e%20prenotare%20un%20Corso%20di%20Ceramica%20con%20Linda."
+               class="book-button">
+              Info, prezzi e prenotazioni
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+        
         <!-- MAPPA / CONTATTI (copiata da novembre, puoi adattare) -->
         <section class="section" id="mappa">
             <div class="map-section">
@@ -1869,6 +2340,29 @@
             submitBtn.disabled = false;
           });
       });
+        // Accordion categorie
+const categoryHeaders = document.querySelectorAll('.category-header');
+
+categoryHeaders.forEach(header => {
+  header.addEventListener('click', () => {
+    const item = header.closest('.category-item');
+    const panel = item.querySelector('.category-panel');
+
+    const isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.category-item').forEach(other => {
+      other.classList.remove('open');
+      const otherPanel = other.querySelector('.category-panel');
+      if (otherPanel) otherPanel.style.maxHeight = null;
+    });
+
+    if (!isOpen) {
+      item.classList.add('open');
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+  });
+});
+
     });
   </script>
 </body>
